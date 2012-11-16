@@ -7,17 +7,11 @@
 # For multiples of both three and five print "FizzBuzz"
 
 def fizzbuzz
-	100.times do |i|
-		if i % 15 == 0
-			printf("%s ", "FizzBuzz")
-		elsif i % 3 == 0
-			printf("%s ", "Fizz")
-		elsif i % 5 == 0
-			printf("%s ", "Buzz")
-		else
-			printf("%s ", i.to_s)
-		end
-	  ++i
+	1.upto(100) do |i|
+		print "Fizz " if a = (i % 3).zero?
+		print "Buzz " if b = (i % 5).zero?
+		print "FizzBuzz " if c = (i % 15).zero?
+		print i.to_s + " " unless (a || b || c)
 	end
 end
 
